@@ -1,11 +1,7 @@
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Navigate,
-} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 import User from "./user/pages/User";
+import NewPlace from "./places/pages/NewPlace";
 
 function App() {
   return (
@@ -15,7 +11,15 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<User />} />
-        <Route path="/redirect" element={<Navigate to={"/"} />} />
+        <Route path="/places/new" element={<NewPlace />} />
+        <Route
+          path="*"
+          element={
+            <>
+              <h1>404 page not found</h1>
+            </>
+          }
+        />
       </Routes>
     </Router>
   );
