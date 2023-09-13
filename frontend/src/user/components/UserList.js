@@ -3,9 +3,9 @@ import "./Userlist.css";
 import UserItem from "./UserItem";
 
 function UserList(props) {
-  if (!props.items.length === 0) {
+  if (props.items.length === 0) {
     return (
-      <div>
+      <div className="center">
         <h2>No users found.</h2>
       </div>
     );
