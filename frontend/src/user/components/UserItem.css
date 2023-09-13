@@ -1,0 +1,22 @@
+li{
+    list-style: none;
+    background-color: aqua;
+    width: 300px;
+    border-radius: 5%;
+}
+
+li .user-item__content{
+    display: flex;
+    padding-top: 1rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.user-item__image img{
+    width: 250px;
+    height: 250px;
+    border-radius: 2rem;
+    object-fit: cover;
+}
