@@ -1,10 +1,10 @@
 import React from "react";
 import "./UserItem.css";
 
-function UserItem({ key, id, placeCount, user, image }) {
+function UserItem({ id, placeCount, user, image }) {
   return (
     <div>
-      <li>
+      <li className="user-item">
         <div className="user-item__content">
           <div className="user-item__image">
             <img src={image} alt={` profile-picture__${user} `} />

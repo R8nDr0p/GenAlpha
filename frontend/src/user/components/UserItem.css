@@ -1,22 +1,23 @@
-li{
-    list-style: none;
-    background-color: aqua;
-    width: 300px;
-    border-radius: 5%;
+.user-item {
+  list-style: none;
+  background-color: antiquewhite;
+  width: 300px;
+  border-radius: 5%;
+  box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-li .user-item__content{
-    display: flex;
-    padding-top: 1rem;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    flex-direction: row;
+.user-item .user-item__content {
+  display: flex;
+  padding-top: 1rem;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row;
 }
 
-.user-item__image img{
-    width: 250px;
-    height: 250px;
-    border-radius: 2rem;
-    object-fit: cover;
+.user-item__image img {
+  width: 250px;
+  height: 250px;
+  border-radius: 2rem;
+  object-fit: cover;
 }
