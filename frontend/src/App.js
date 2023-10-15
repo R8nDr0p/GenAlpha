@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 import User from "./user/pages/User";
 import NewPlace from "./places/pages/NewPlace";
+import Layout from "./Layout";
 
 function App() {
   return (
@@ -10,16 +11,18 @@ function App() {
     // </div>
     <Router>
       <Routes>
-        <Route path="/" element={<User />} />
-        <Route path="/places/new" element={<NewPlace />} />
-        <Route
-          path="*"
-          element={
-            <>
-              <h1>404 page not found</h1>
-            </>
-          }
-        />
+        <Route path="/" element={<Layout />}>
+          <Route path="/" element={<User />} />
+          <Route path="/places/new" element={<NewPlace />} />
+          <Route
+            path="*"
+            element={
+              <>
+                <h1>404 page not found</h1>
+              </>
+            }
+          />
+        </Route>
       </Routes>
     </Router>
   );
