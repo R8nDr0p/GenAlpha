@@ -12,7 +12,7 @@ function UserItem({ placeCount, user, image }) {
           <Link to={`/{props.id}/places`}>
             <Avatar img={image} className={"user-item__image"} user={user} />
             <div className="user-item__info">
-              <h2>{user}</h2>
+              <h2 className="text-xl font-bold text-amber-200">{user}</h2>
               <h3>
                 {placeCount} {placeCount === 1 ? "Place" : "Places"}
               </h3>
