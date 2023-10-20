@@ -9,7 +9,7 @@ function Navlinks() {
       <li>
         <NavLink
           className={
-            "text-amber-200 hover:text-amber-500 hover:bg-teal-500 hover:px-2 rounded transition-all duration-200"
+            "text-xl text-amber-200 hover:text-amber-300 hover:bg-slate-700 hover:px-2 rounded transition-all duration-150"
           }
           to={"/"}
         >
@@ -17,17 +17,32 @@ function Navlinks() {
         </NavLink>
       </li>
       <li>
-        <NavLink className={"text-amber-200"} to={"/"}>
+        <NavLink
+          className={
+            "text-xl text-amber-200 hover:text-amber-300 hover:bg-slate-700 hover:px-2 rounded transition-all duration-150"
+          }
+          to={"/"}
+        >
           My Places
         </NavLink>
       </li>
       <li>
-        <NavLink className={"text-amber-200"} to={"/"}>
+        <NavLink
+          className={
+            "text-xl text-amber-200 hover:text-amber-300 hover:bg-slate-700 hover:px-2 rounded transition-all duration-150"
+          }
+          to={"/"}
+        >
           Add Place
         </NavLink>
       </li>
       <li>
-        <NavLink className={"text-amber-200"} to={"/"}>
+        <NavLink
+          className={
+            "text-xl text-amber-200 hover:text-amber-300 hover:bg-slate-700 hover:px-2 rounded transition-all duration-150"
+          }
+          to={"/"}
+        >
           Authenticate
         </NavLink>
       </li>
