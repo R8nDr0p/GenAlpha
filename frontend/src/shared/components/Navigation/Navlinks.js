@@ -12,6 +12,7 @@ function Navlinks() {
             "text-xl text-amber-200 hover:text-amber-300 hover:bg-slate-700 hover:px-2 rounded transition-all duration-150"
           }
           to={"/"}
+          exact
         >
           Users
         </NavLink>
@@ -21,7 +22,7 @@ function Navlinks() {
           className={
             "text-xl text-amber-200 hover:text-amber-300 hover:bg-slate-700 hover:px-2 rounded transition-all duration-150"
           }
-          to={"/"}
+          to={"/u1/places"}
         >
           My Places
         </NavLink>
@@ -31,7 +32,7 @@ function Navlinks() {
           className={
             "text-xl text-amber-200 hover:text-amber-300 hover:bg-slate-700 hover:px-2 rounded transition-all duration-150"
           }
-          to={"/"}
+          to={"/places/new"}
         >
           Add Place
         </NavLink>
@@ -41,7 +42,7 @@ function Navlinks() {
           className={
             "text-xl text-amber-200 hover:text-amber-300 hover:bg-slate-700 hover:px-2 rounded transition-all duration-150"
           }
-          to={"/"}
+          to={"/auth"}
         >
           Authenticate
         </NavLink>

@@ -2,8 +2,7 @@ import React from "react";
 import { createPortal } from "react-dom";
 import { CSSTransition } from "react-transition-group";
 
-function SideDrawer({ children, show }) {
-  console.log(show);
+function SideDrawer({ children, show, onClick }) {
   const contentJsx = (
     <CSSTransition
       in={show}
