@@ -7,6 +7,7 @@ import Navlinks from "./Navlinks";
 import "./MainNav.css";
 import SideDrawer from "./SideDrawer";
 import Backdrop from "../UIElements/Backdrop";
+import { BsFillPinMapFill, BsLink } from "react-icons/bs";
 
 function MainNav(props) {
   const [OpenNav, setOpenNav] = useState(false);
@@ -35,7 +36,13 @@ function MainNav(props) {
           <FaBarsStaggered />
         </button>
         <h1 className="main-navigation__title text-3xl text-amber-300 p-2">
-          <Link to={"/"}>Ping|Me</Link>
+          <Link
+            to={"/"}
+            className={"flex flex-row items-center justify-center gap-2"}
+          >
+            <h1>Ping | Me</h1>
+            <BsFillPinMapFill className={"text-red-700"} />
+          </Link>
         </h1>
         <nav className="hidden md:block">
           <Navlinks />
