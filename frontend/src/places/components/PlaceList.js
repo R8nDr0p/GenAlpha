@@ -1,6 +1,7 @@
 import React from "react";
 import Card from "../../shared/components/UIElements/Card";
 import PlaceItem from "./PlaceItem";
+import Button from "../../shared/components/FormElements/Button";
 
 function PlaceList({ items }) {
   if (items.length === 0) {
@@ -27,6 +28,7 @@ function PlaceList({ items }) {
               </div>
             </div>
           </button>
+          <Button to={"/"}>Trial</Button>
         </Card>
       </div>
     );
