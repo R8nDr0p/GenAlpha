@@ -7,7 +7,7 @@ import Navlinks from "./Navlinks";
 import "./MainNav.css";
 import SideDrawer from "./SideDrawer";
 import Backdrop from "../UIElements/Backdrop";
-import { BsFillPinMapFill, BsLink } from "react-icons/bs";
+import { BsFillPinMapFill } from "react-icons/bs";
 
 function MainNav(props) {
   const [OpenNav, setOpenNav] = useState(false);

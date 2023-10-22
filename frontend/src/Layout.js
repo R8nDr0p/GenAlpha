@@ -6,7 +6,7 @@ function Layout() {
   return (
     <>
       <MainNav />
-      <main>
+      <main className={"container mx-auto mt-5"}>
         <Outlet />
       </main>
     </>

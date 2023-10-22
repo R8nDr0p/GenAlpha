@@ -2,13 +2,14 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Avatar from "../../shared/components/UIElements/Avatar";
 import Card from "../../shared/components/UIElements/Card";
+
 import "./UserItem.css";
 
 function UserItem({ placeCount, user, image, id }) {
   return (
     <div>
-      <li className="user-item">
-        <Card className="user-item__content">
+      <Card>
+        <li className="user-item">
           <Link to={`/${id}/places`}>
             <Avatar img={image} className={"user-item__image "} user={user} />
             <div className="user-item__info">
@@ -18,8 +19,8 @@ function UserItem({ placeCount, user, image, id }) {
               </h3>
             </div>
           </Link>
-        </Card>
-      </li>
+        </li>
+      </Card>
     </div>
   );
 }
