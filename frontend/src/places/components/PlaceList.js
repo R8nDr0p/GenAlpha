@@ -28,7 +28,7 @@ function PlaceList({ items }) {
               </div>
             </div>
           </button>
-          <Button to={"/"}>Trial</Button>
+          <Button>Trial</Button>
         </Card>
       </div>
     );

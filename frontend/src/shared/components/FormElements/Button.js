@@ -2,6 +2,17 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 function Button(props) {
+  if (props.href) {
+    return (
+      <a
+        className={`${
+          props.inverse && "bg-transparent border-2 hover:bg-slate-700"
+        } ${props.danger && "bg-red-600 border-b-4 border-b-slate-700"}`}
+      >
+        {props.children}
+      </a>
+    );
+  }
   if (props.to) {
     return (
       <Link
@@ -14,7 +25,11 @@ function Button(props) {
   }
 
   return (
-    <button className={`${props.inverse && "bg-transparent "}`}>
+    <button
+      className={`${
+        props.inverse && "bg-transparent"
+      } py-3 px-6 rounded cursor-pointer bg-[#ff0055]`}
+    >
       {props.children}
     </button>
   );
