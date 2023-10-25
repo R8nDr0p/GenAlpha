@@ -8,7 +8,7 @@ import "./UserItem.css";
 function UserItem({ placeCount, user, image, id }) {
   return (
     <div>
-      <Card>
+      <Card hover>
         <li className="user-item">
           <Link to={`/${id}/places`}>
             <Avatar img={image} className={"user-item__image "} user={user} />
