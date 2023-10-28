@@ -4,8 +4,9 @@ import Modal from "../../shared/components/UIElements/Modal";
 import Button from "../../shared/components/FormElements/Button";
 
 import "./PlaceItem.css";
+import Map from "../../shared/components/UIElements/Map";
 
-function PlaceItem({ image, title, address, description }) {
+function PlaceItem({ image, title, address, description, coordinates }) {
   const [showMap, setShowMap] = useState(false);
   const openMapHandler = () => setShowMap(true);
   const closeMapHandler = () => setShowMap(false);
@@ -27,7 +28,7 @@ function PlaceItem({ image, title, address, description }) {
         }
       >
         <div className={"map-container w-full h-60"}>
-          <h2>The Map!</h2>
+          <Map center={coordinates} zoom={16} />
         </div>
       </Modal>
       <li>
@@ -45,7 +46,7 @@ function PlaceItem({ image, title, address, description }) {
             <p className={"text-center"}>{description}</p>
           </div>
           <hr className={"mb-2"} />
-          <div className={"place-item__actions flex gap-2 justify-center"}>
+          <div className={"place-item__actions flex flex-col gap-2 justify-center md:flex-row"}>
             <button
               onClick={openMapHandler}
               className="bg-emerald-950 text-amber-300 border border-emerald-400 border-b-4 font-medium overflow-hidden relative px-4 py-2 rounded-md hover:brightness-150 hover:border-t-4 hover:border-b active:opacity-75 outline-none duration-300 group"
