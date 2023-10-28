@@ -4,48 +4,37 @@ import { NavLink } from "react-router-dom";
 import "./Navlinks.css";
 
 function Navlinks() {
+    const links = [{
+        linkName: "Users",
+        route: "/"
+    },
+        {
+            linkName: "My Places",
+            route:"/u1/places"
+        },
+        {
+            linkName:"Add Place",
+            route:'/places/new'
+        },
+        {
+            linkName:"Authenticate",
+            route: '/auth'
+        },
+    ]
   return (
     <ul className="nav-links flex flex-col md:flex-row items-center justify-center gap-4">
-      <li>
-        <NavLink
-          className={
-            "text-xl text-amber-200 hover:text-amber-300 hover:bg-slate-700 hover:px-2 rounded transition-all duration-150"
-          }
-          to={"/"}
-        >
-          Users
-        </NavLink>
-      </li>
-      <li>
-        <NavLink
-          className={
-            "text-xl text-amber-200 hover:text-amber-300 hover:bg-slate-700 hover:px-2 rounded transition-all duration-150"
-          }
-          to={"/u1/places"}
-        >
-          My Places
-        </NavLink>
-      </li>
-      <li>
-        <NavLink
-          className={
-            "text-xl text-amber-200 hover:text-amber-300 hover:bg-slate-700 hover:px-2 rounded transition-all duration-150"
-          }
-          to={"/places/new"}
-        >
-          Add Place
-        </NavLink>
-      </li>
-      <li>
-        <NavLink
-          className={
-            "text-xl text-amber-200 hover:text-amber-300 hover:bg-slate-700 hover:px-2 rounded transition-all duration-150"
-          }
-          to={"/auth"}
-        >
-          Authenticate
-        </NavLink>
-      </li>
+        {links.map((link, index)=>{
+            return (
+                <li key={index}>
+                    <NavLink to={`${link.route}`} className={            "text-xl text-amber-200 " +
+              // "hover:text-amber-300 hover:bg-slate-700 hover:px-2" +
+              "hover:bg-slate-400 hover:px-2 hover:text-slate-950" +
+              " rounded transition-all duration-150"}>
+                        {link.linkName}
+                    </NavLink>
+                </li>
+            )
+        })}
     </ul>
   );
 }
