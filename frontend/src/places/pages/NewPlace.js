@@ -52,7 +52,7 @@ function NewPlace() {
     });
   }, []);
 
-  const placeInputHandler = (event) => {
+  const placeSubmitHandler = (event) => {
     event.preventDefault();
     console.log(formState.inputs);
   };
@@ -61,7 +61,7 @@ function NewPlace() {
     <>
       <h1>New places page is here</h1>
       <form
-        onSubmit={placeInputHandler}
+        onSubmit={placeSubmitHandler}
         className={
           "place-form list-none mx-auto p-4 w-[90%] max-w-[40rem] shadow-xl rounded bg-amber-100"
         }
