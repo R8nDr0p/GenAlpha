@@ -5,8 +5,9 @@ import Button from "../../shared/components/FormElements/Button";
 
 import "./PlaceItem.css";
 import Map from "../../shared/components/UIElements/Map";
+import { Link } from "react-router-dom";
 
-function PlaceItem({ image, title, address, description, coordinates }) {
+function PlaceItem({ image, title, address, description, coordinates, id }) {
   const [showMap, setShowMap] = useState(false);
   const openMapHandler = () => setShowMap(true);
   const closeMapHandler = () => setShowMap(false);
@@ -46,7 +47,11 @@ function PlaceItem({ image, title, address, description, coordinates }) {
             <p className={"text-center"}>{description}</p>
           </div>
           <hr className={"mb-2"} />
-          <div className={"place-item__actions flex flex-col gap-2 justify-center md:flex-row"}>
+          <div
+            className={
+              "place-item__actions flex flex-col gap-2 justify-center md:flex-row"
+            }
+          >
             <button
               onClick={openMapHandler}
               className="bg-emerald-950 text-amber-300 border border-emerald-400 border-b-4 font-medium overflow-hidden relative px-4 py-2 rounded-md hover:brightness-150 hover:border-t-4 hover:border-b active:opacity-75 outline-none duration-300 group"
@@ -56,7 +61,7 @@ function PlaceItem({ image, title, address, description, coordinates }) {
             </button>
             <button className="bg-green-950 text-amber-300 border border-green-400 border-b-4 font-medium overflow-hidden relative px-4 py-2 rounded-md hover:brightness-150 hover:border-t-4 hover:border-b active:opacity-75 outline-none duration-300 group">
               <span className="bg-green-400 shadow-emerald-400 absolute -top-[150%] left-0 inline-flex w-80 h-[5px] rounded-md opacity-50 group-hover:top-[150%] duration-500 shadow-[0_0_10px_10px_rgba(0,0,0,0.3)]"></span>
-              EDIT
+              <Link to={`/places/${id}`}>EDIT</Link>
             </button>
             <button className="bg-red-950 text-amber-300 border border-red-400 border-b-4 font-medium overflow-hidden relative px-4 py-2 rounded-md hover:brightness-150 hover:border-t-4 hover:border-b active:opacity-75 outline-none duration-300 group">
               <span className="bg-red-400 shadow-emerald-400 absolute -top-[150%] left-0 inline-flex w-80 h-[5px] rounded-md opacity-50 group-hover:top-[150%] duration-500 shadow-[0_0_10px_10px_rgba(0,0,0,0.3)]"></span>
