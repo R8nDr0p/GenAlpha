@@ -59,7 +59,6 @@ function NewPlace() {
 
   return (
     <>
-      <h1>New places page is here</h1>
       <form
         onSubmit={placeSubmitHandler}
         className={
@@ -79,7 +78,7 @@ function NewPlace() {
           id={"description"}
           element={"textarea"}
           type="Description"
-          label={"Title"}
+          label={"Description"}
           validators={[VALIDATOR_MINLENGTH(5)]}
           errorText={
             "Please enter a valid description (at least 5 characters)."
@@ -90,7 +89,7 @@ function NewPlace() {
           id={"address"}
           element={"input"}
           type="Address"
-          label={"Title"}
+          label={"Address"}
           validators={[VALIDATOR_REQUIRE()]}
           errorText={"Please enter a valid Address."}
           onInput={InputHandler}
