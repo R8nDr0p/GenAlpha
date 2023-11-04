@@ -60,7 +60,7 @@ const UpdatePlace = () => {
     );
   }
   return (
-    <form>
+    <form className={"list-none mx-auto p-4 w-[90%] max-w-[40rem] shadow-xl rounded bg-amber-100"}>
       <Input
         id="title"
         element="input"
